@@ -249,7 +249,7 @@ const Game = {
 
 	generateFruitBody: function (x, y, sizeIndex, extraConfig = {}) {
 		const size = Game.fruitSizes[sizeIndex];
-		const circle = Bodies.circle(x, y, size.radius, {
+		const circle = Bodies.circle(x, y + 39, size.radius, {
 			...friction,
 			...extraConfig,
 			render: { sprite: { texture: size.img, xScale: size.radius / 512, yScale: size.radius / 512 } },
